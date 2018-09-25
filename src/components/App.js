@@ -1,13 +1,15 @@
-import React, { Component } from "react";
+import React, {
+    Component
+} from "react";
 import '../styles/App.css';
 import FetchData from "./FetchData";
 
 class App extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             biasSelected: 'numeracy',
-            optionSelected : 'Numeracy'
+            optionSelected: 'Numeracy'
         }
         this.handleSelect = this.handleSelect.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,24 +17,27 @@ class App extends Component {
 
 
 
-    handleSelect(event){
+    handleSelect(event) {
         const biasDict = {
-            Numeracy:'numeracy',
-            Systems:'system',
-            Physical:'pw',
-            Biological:'bio',
-            HumanNature:'humannature',
-            MicroeconomicsStrategy:'mes',
-            MilitaryWar:'military'
+            Numeracy: 'numeracy',
+            Systems: 'system',
+            Physical: 'pw',
+            Biological: 'bio',
+            HumanNature: 'humannature',
+            MicroeconomicsStrategy: 'mes',
+            MilitaryWar: 'military'
         }
         console.log(event.target.value);
-        this.setState({ biasSelected: biasDict[event.target.value], optionSelected:event.target.value });
+        this.setState({
+            biasSelected: biasDict[event.target.value],
+            optionSelected: event.target.value
+        });
     }
 
-    handleSubmit(){
+    handleSubmit() {
         console.log(this.state);
     }
-
+    
     render() {
         return (
             <div>

@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, {
+    Component
+} from "react";
 import '../styles/App.css';
 import App from './App';
 
 class FetchData extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             loading: true,
@@ -12,29 +14,36 @@ class FetchData extends Component {
     }
 
 
-    async componentDidMount(){
-            const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
-            const API_URL =  `https://shrouded-atoll-30731.herokuapp.com/api/v1/mm/numeracy`;
-            const response = await fetch(PROXY_URL+API_URL);
-            const data = await response.json();
-            console.log(data);
-            this.setState({biases : data, loading: false})
-    
-            }
+    async componentDidMount() {
+        const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
+        const API_URL = `https://shrouded-atoll-30731.herokuapp.com/api/v1/mm/numeracy`;
+        const response = await fetch(PROXY_URL + API_URL);
+        const data = await response.json();
+        console.log(data);
+        this.setState({
+            biases: data,
+            loading: false
+        })
 
-    async componentWillReceiveProps(nextProps){
-        if(nextProps.selected!==this.props.selected){
-            console.log("first "+this.props.selected);
-            let selectedURL = nextProps.selected;      
+    }
+
+    async componentWillReceiveProps(nextProps) {
+        if (nextProps.selected !== this.props.selected) {
+            console.log("first " + this.props.selected);
+            let selectedURL = nextProps.selected;
             const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
-            const API_URL =  `https://shrouded-atoll-30731.herokuapp.com/api/v1/mm/${selectedURL}`;
-            const response = await fetch(PROXY_URL+API_URL);
+            const API_URL = `https://shrouded-atoll-30731.herokuapp.com/api/v1/mm/${selectedURL}`;
+            const response = await fetch(PROXY_URL + API_URL);
             const data = await response.json();
             console.log(data);
-            this.setState({biases : data, loading: false})
-    
-            }
+            this.setState({
+                biases: data,
+                loading: false
+            })
+
         }
+    }
+    
     render() {
         return (
             <div>

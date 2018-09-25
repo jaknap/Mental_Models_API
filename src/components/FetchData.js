@@ -50,17 +50,6 @@ class FetchData extends Component {
                 <h1></h1>
                 {this.state.loading ? 
                     '...loading' :
-
-                    // (<div>
-                    //     {this.state.people.map( (person) => 
-                    //         <div key={person.login.uuid}>
-                    //           <div>{person.name.title}</div>
-                    //           <div>{person.name.first}</div>
-                    //           <img src={person.picture.large}/>
-                    //         </div>
-                    //     )}
-                    // </div>
-                    // )
                     (<div>
                            {this.state.biases.map( (bias) => 
                             <div key={bias._id}>

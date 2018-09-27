@@ -41,9 +41,12 @@ class App extends Component {
     render() {
         return (
             <div>
-                <div>
+                <div className='container'>
+                <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Models</label>
+                </div>
                 <select value={this.state.optionSelected}
-                        onChange={this.handleSelect}>
+                        onChange={this.handleSelect} class="custom-select" id="inputGroupSelect01">
                     <option>Numeracy</option>
                     <option>Systems</option>
                     <option>Physical</option>

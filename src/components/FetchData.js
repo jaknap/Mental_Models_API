@@ -50,7 +50,7 @@ class FetchData extends Component {
                 <h1></h1>
                 {this.state.loading ? 
                     '...loading' :
-                    (<div>
+                    (<div className="bias">
                            {this.state.biases.map( (bias) => 
                             <div key={bias._id}>
                                <div>{bias.name}</div>

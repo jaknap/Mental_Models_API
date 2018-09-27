@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral:800');
+body{
+    background-color: #4DD3FF;
+}
+
 h1 {
-    color: #27aedb;
+    color: #FAFF00;
     text-align: center;
+    font-family: 'Spectral', serif;
+    font-size: 75px;
 }
 
 div{
@@ -13,6 +20,18 @@ div{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
+  }
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
   }
   
+.bias{
+    font-family: 'Spectral', serif;
+    font-size: 16.5px;
+}

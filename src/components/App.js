@@ -41,6 +41,8 @@ class App extends Component {
     render() {
         return (
             <div>
+                <span className="heading">
+                <h1>Mental Models</h1></span>
                 <div className='container'>
                 <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Models</label>

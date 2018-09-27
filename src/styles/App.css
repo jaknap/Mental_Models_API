@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Spectral:800');
 body{
-    background-color: #4DD3FF;
+    background-color: #5CBF3A;
 }
 
 h1 {
-    color: #FAFF00;
+    display: block;
+    color: #faf3d3;
+    font-family:'Spectral', serif;
+    font-size: 6.25vw;
+    line-height: 7.5vw;
     text-align: center;
-    font-family: 'Spectral', serif;
-    font-size: 75px;
+    text-transform: uppercase;
+    text-shadow: 8px 8px 0 #44714a;
 }
 
 div{
